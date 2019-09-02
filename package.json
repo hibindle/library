@@ -1,6 +1,6 @@
 {
 	"name": "@bindle/library",
-	"version": "1.0.3",
+	"version": "1.0.2",
 	"private": true,
 	"license": "MIT",
 	"main": "index.js",
@@ -52,6 +52,7 @@
 	},
 	"git": {
 		"scripts": {
+			"commit-msg": "./scripts/commit-msg $1",
 			"pre-commit": "./node_modules/.bin/lint-staged"
 		}
 	},

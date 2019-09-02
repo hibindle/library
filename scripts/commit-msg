@@ -13,7 +13,8 @@ const TYPES = {
 	platform: true,
 	misc: true,
 	Merge: true,
-	cypress: true
+	cypress: true,
+	v: true
 }
 
 const LOG_LEVELS = {
@@ -30,6 +31,11 @@ function log(message, severity) {
 
 function validate(message) {
 	const [firstLine] = message.split('\n')
+	const firstChar = message.charAt(0)
+
+	if (firstChar === 'v' && message.length < 10) {
+		return true
+	}
 
 	const match = firstLine.match(PATTERN)
 	if (!match) {
