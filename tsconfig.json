@@ -1,13 +1,14 @@
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
-        "jsx": "react",
-        "allowJs": false,
-        "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
-        "lib": ["dom", "es7"]
-    }
+	"compileOnSave": false,
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"target": "es6",
+		"module": "es6",
+		"jsx": "react",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"lib": ["dom", "es7"]
+	}
 }
