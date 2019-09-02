@@ -1,22 +1,17 @@
 !(function(e, t) {
-	if ('object' === typeof exports && 'object' === typeof module) {
+	if ('object' == typeof exports && 'object' == typeof module)
 		module.exports = t()
-	} else if ('function' === typeof define && define.amd) {
-		define([], t)
-	} else {
-		const r = t()
-		for (const n in r) {
-			;('object' === typeof exports ? exports : e)[n] = r[n]
-		}
+	else if ('function' == typeof define && define.amd) define([], t)
+	else {
+		var r = t()
+		for (var n in r) ('object' == typeof exports ? exports : e)[n] = r[n]
 	}
 })(window, function() {
 	return (function(e) {
-		const t = {}
+		var t = {}
 		function r(n) {
-			if (t[n]) {
-				return t[n].exports
-			}
-			const o = (t[n] = { i: n, l: !1, exports: {} })
+			if (t[n]) return t[n].exports
+			var o = (t[n] = { i: n, l: !1, exports: {} })
 			return e[n].call(o.exports, o, o.exports, r), (o.l = !0), o.exports
 		}
 		return (
@@ -27,7 +22,7 @@
 					Object.defineProperty(e, t, { enumerable: !0, get: n })
 			}),
 			(r.r = function(e) {
-				'undefined' !== typeof Symbol &&
+				'undefined' != typeof Symbol &&
 					Symbol.toStringTag &&
 					Object.defineProperty(e, Symbol.toStringTag, {
 						value: 'Module'
@@ -35,22 +30,18 @@
 					Object.defineProperty(e, '__esModule', { value: !0 })
 			}),
 			(r.t = function(e, t) {
-				if ((1 & t && (e = r(e)), 8 & t)) {
-					return e
-				}
-				if (4 & t && 'object' === typeof e && e && e.__esModule) {
-					return e
-				}
-				const n = Object.create(null)
+				if ((1 & t && (e = r(e)), 8 & t)) return e
+				if (4 & t && 'object' == typeof e && e && e.__esModule) return e
+				var n = Object.create(null)
 				if (
 					(r.r(n),
 					Object.defineProperty(n, 'default', {
 						enumerable: !0,
 						value: e
 					}),
-					2 & t && 'string' !== typeof e)
-				) {
-					for (const o in e) {
+					2 & t && 'string' != typeof e)
+				)
+					for (var o in e)
 						r.d(
 							n,
 							o,
@@ -58,12 +49,10 @@
 								return e[t]
 							}.bind(null, o)
 						)
-					}
-				}
 				return n
 			}),
 			(r.n = function(e) {
-				const t =
+				var t =
 					e && e.__esModule
 						? function() {
 								return e.default
@@ -93,8 +82,8 @@
 			 *
 			 * This source code is licensed under the MIT license found in the
 			 * LICENSE file in the root directory of this source tree.
-			 */ const n = r(2),
-				o = 'function' === typeof Symbol && Symbol.for,
+			 */ var n = r(2),
+				o = 'function' == typeof Symbol && Symbol.for,
 				u = o ? Symbol.for('react.element') : 60103,
 				c = o ? Symbol.for('react.portal') : 60106,
 				f = o ? Symbol.for('react.fragment') : 60107,
@@ -109,7 +98,7 @@
 				h = o ? Symbol.for('react.lazy') : 60116
 			o && Symbol.for('react.fundamental'),
 				o && Symbol.for('react.responder')
-			const m = 'function' === typeof Symbol && Symbol.iterator
+			var m = 'function' == typeof Symbol && Symbol.iterator
 			function b(e) {
 				for (
 					var t = e.message,
@@ -119,9 +108,8 @@
 						n = 1;
 					n < arguments.length;
 					n++
-				) {
+				)
 					r += '&args[]=' + encodeURIComponent(arguments[n])
-				}
 				return (
 					(e.message =
 						'Minified React error #' +
@@ -132,13 +120,13 @@
 					e
 				)
 			}
-			const g = {
-					isMounted() {
+			var g = {
+					isMounted: function() {
 						return !1
 					},
-					enqueueForceUpdate() {},
-					enqueueReplaceState() {},
-					enqueueSetState() {}
+					enqueueForceUpdate: function() {},
+					enqueueReplaceState: function() {},
+					enqueueSetState: function() {}
 				},
 				S = {}
 			function j(e, t, r) {
@@ -157,53 +145,46 @@
 			;(j.prototype.isReactComponent = {}),
 				(j.prototype.setState = function(e, t) {
 					if (
-						'object' !== typeof e &&
-						'function' !== typeof e &&
+						'object' != typeof e &&
+						'function' != typeof e &&
 						null != e
-					) {
+					)
 						throw b(Error(85))
-					}
 					this.updater.enqueueSetState(this, e, t, 'setState')
 				}),
 				(j.prototype.forceUpdate = function(e) {
 					this.updater.enqueueForceUpdate(this, e, 'forceUpdate')
 				}),
 				(_.prototype = j.prototype)
-			const O = (w.prototype = new _())
+			var O = (w.prototype = new _())
 			;(O.constructor = w),
 				n(O, j.prototype),
 				(O.isPureReactComponent = !0)
-			const x = { current: null },
+			var x = { current: null },
 				k = { suspense: null },
 				E = { current: null },
 				P = Object.prototype.hasOwnProperty,
 				C = { key: !0, ref: !0, __self: !0, __source: !0 }
 			function $(e, t, r) {
-				let n = void 0,
+				var n = void 0,
 					o = {},
 					c = null,
 					f = null
-				if (null != t) {
+				if (null != t)
 					for (n in (void 0 !== t.ref && (f = t.ref),
-					void 0 !== t.key && (c = String(t.key)),
-					t)) {
+					void 0 !== t.key && (c = '' + t.key),
+					t))
 						P.call(t, n) && !C.hasOwnProperty(n) && (o[n] = t[n])
-					}
-				}
-				let l = arguments.length - 2
-				if (1 === l) {
-					o.children = r
-				} else if (1 < l) {
-					for (var i = Array(l), a = 0; a < l; a++) {
+				var l = arguments.length - 2
+				if (1 === l) o.children = r
+				else if (1 < l) {
+					for (var i = Array(l), a = 0; a < l; a++)
 						i[a] = arguments[a + 2]
-					}
 					o.children = i
 				}
-				if (e && e.defaultProps) {
-					for (n in (l = e.defaultProps)) {
+				if (e && e.defaultProps)
+					for (n in (l = e.defaultProps))
 						void 0 === o[n] && (o[n] = l[n])
-					}
-				}
 				return {
 					$$typeof: u,
 					type: e,
@@ -214,13 +195,13 @@
 				}
 			}
 			function R(e) {
-				return 'object' === typeof e && null !== e && e.$$typeof === u
+				return 'object' == typeof e && null !== e && e.$$typeof === u
 			}
-			const V = /\/+/g,
+			var V = /\/+/g,
 				M = []
 			function z(e, t, r, n) {
 				if (M.length) {
-					const o = M.pop()
+					var o = M.pop()
 					return (
 						(o.result = e),
 						(o.keyPrefix = t),
@@ -250,13 +231,12 @@
 				return null == e
 					? 0
 					: (function e(t, r, n, o) {
-							let f = typeof t
+							var f = typeof t
 							;('undefined' !== f && 'boolean' !== f) ||
 								(t = null)
-							let l = !1
-							if (null === t) {
-								l = !0
-							} else {
+							var l = !1
+							if (null === t) l = !0
+							else
 								switch (f) {
 									case 'string':
 									case 'number':
@@ -269,44 +249,41 @@
 												l = !0
 										}
 								}
-							}
-							if (l) {
+							if (l)
 								return n(o, t, '' === r ? '.' + q(t, 0) : r), 1
-							}
 							if (
 								((l = 0),
 								(r = '' === r ? '.' : r + ':'),
 								Array.isArray(t))
-							) {
+							)
 								for (var i = 0; i < t.length; i++) {
 									var a = r + q((f = t[i]), i)
 									l += e(f, a, n, o)
 								}
-							} else if (
-								(null === t || 'object' !== typeof t
+							else if (
+								(null === t || 'object' != typeof t
 									? (a = null)
 									: (a =
-											'function' ===
+											'function' ==
 											typeof (a =
 												(m && t[m]) || t['@@iterator'])
 												? a
 												: null),
-								'function' === typeof a)
-							) {
+								'function' == typeof a)
+							)
 								for (
 									t = a.call(t), i = 0;
 									!(f = t.next()).done;
 
-								) {
+								)
 									l += e(
 										(f = f.value),
 										(a = r + q(f, i++)),
 										n,
 										o
 									)
-								}
-							} else if ('object' === f) {
-								throw ((n = String(t)),
+							else if ('object' === f)
+								throw ((n = '' + t),
 								b(
 									Error(31),
 									'[object Object]' === n
@@ -316,17 +293,16 @@
 										: n,
 									''
 								))
-							}
 							return l
 					  })(e, '', t, r)
 			}
 			function q(e, t) {
-				return 'object' === typeof e && null !== e && null != e.key
+				return 'object' == typeof e && null !== e && null != e.key
 					? (function(e) {
-							const t = { '=': '=0', ':': '=2' }
+							var t = { '=': '=0', ':': '=2' }
 							return (
 								'$' +
-								String(e).replace(/[=:]/g, function(e) {
+								('' + e).replace(/[=:]/g, function(e) {
 									return t[e]
 								})
 							)
@@ -337,7 +313,7 @@
 				e.func.call(e.context, t, e.count++)
 			}
 			function U(e, t, r) {
-				const n = e.result,
+				var n = e.result,
 					o = e.keyPrefix
 				;(e = e.func.call(e.context, t, e.count++)),
 					Array.isArray(e)
@@ -360,41 +336,35 @@
 									o +
 										(!e.key || (t && t.key === e.key)
 											? ''
-											: String(e.key).replace(V, '$&/') +
+											: ('' + e.key).replace(V, '$&/') +
 											  '/') +
 										r
 								)),
 						  n.push(e))
 			}
 			function T(e, t, r, n, o) {
-				let u = ''
-				null != r && (u = String(r).replace(V, '$&/') + '/'),
+				var u = ''
+				null != r && (u = ('' + r).replace(V, '$&/') + '/'),
 					I(e, U, (t = z(t, u, n, o))),
 					A(t)
 			}
 			function F() {
-				const e = x.current
-				if (null === e) {
-					throw b(Error(321))
-				}
+				var e = x.current
+				if (null === e) throw b(Error(321))
 				return e
 			}
-			const H = {
+			var H = {
 					Children: {
-						map(e, t, r) {
-							if (null == e) {
-								return e
-							}
-							const n = []
+						map: function(e, t, r) {
+							if (null == e) return e
+							var n = []
 							return T(e, n, null, t, r), n
 						},
-						forEach(e, t, r) {
-							if (null == e) {
-								return e
-							}
+						forEach: function(e, t, r) {
+							if (null == e) return e
 							I(e, L, (t = z(null, null, t, r))), A(t)
 						},
-						count(e) {
+						count: function(e) {
 							return I(
 								e,
 								function() {
@@ -403,8 +373,8 @@
 								null
 							)
 						},
-						toArray(e) {
-							const t = []
+						toArray: function(e) {
+							var t = []
 							return (
 								T(e, t, null, function(e) {
 									return e
@@ -412,19 +382,17 @@
 								t
 							)
 						},
-						only(e) {
-							if (!R(e)) {
-								throw b(Error(143))
-							}
+						only: function(e) {
+							if (!R(e)) throw b(Error(143))
 							return e
 						}
 					},
-					createRef() {
+					createRef: function() {
 						return { current: null }
 					},
 					Component: j,
 					PureComponent: w,
-					createContext(e, t) {
+					createContext: function(e, t) {
 						return (
 							void 0 === t && (t = null),
 							((e = {
@@ -439,10 +407,10 @@
 							(e.Consumer = e)
 						)
 					},
-					forwardRef(e) {
+					forwardRef: function(e) {
 						return { $$typeof: p, render: e }
 					},
-					lazy(e) {
+					lazy: function(e) {
 						return {
 							$$typeof: h,
 							_ctor: e,
@@ -450,39 +418,39 @@
 							_result: null
 						}
 					},
-					memo(e, t) {
+					memo: function(e, t) {
 						return {
 							$$typeof: v,
 							type: e,
 							compare: void 0 === t ? null : t
 						}
 					},
-					useCallback(e, t) {
+					useCallback: function(e, t) {
 						return F().useCallback(e, t)
 					},
-					useContext(e, t) {
+					useContext: function(e, t) {
 						return F().useContext(e, t)
 					},
-					useEffect(e, t) {
+					useEffect: function(e, t) {
 						return F().useEffect(e, t)
 					},
-					useImperativeHandle(e, t, r) {
+					useImperativeHandle: function(e, t, r) {
 						return F().useImperativeHandle(e, t, r)
 					},
-					useDebugValue() {},
-					useLayoutEffect(e, t) {
+					useDebugValue: function() {},
+					useLayoutEffect: function(e, t) {
 						return F().useLayoutEffect(e, t)
 					},
-					useMemo(e, t) {
+					useMemo: function(e, t) {
 						return F().useMemo(e, t)
 					},
-					useReducer(e, t, r) {
+					useReducer: function(e, t, r) {
 						return F().useReducer(e, t, r)
 					},
-					useRef(e) {
+					useRef: function(e) {
 						return F().useRef(e)
 					},
-					useState(e) {
+					useState: function(e) {
 						return F().useState(e)
 					},
 					Fragment: f,
@@ -491,38 +459,32 @@
 					Suspense: y,
 					unstable_SuspenseList: d,
 					createElement: $,
-					cloneElement(e, t, r) {
-						if (null == e) {
-							throw b(Error(267), e)
-						}
-						let o = void 0,
+					cloneElement: function(e, t, r) {
+						if (null == e) throw b(Error(267), e)
+						var o = void 0,
 							c = n({}, e.props),
 							f = e.key,
 							l = e.ref,
 							i = e._owner
 						if (null != t) {
 							void 0 !== t.ref && ((l = t.ref), (i = E.current)),
-								void 0 !== t.key && (f = String(t.key))
+								void 0 !== t.key && (f = '' + t.key)
 							var a = void 0
 							for (o in (e.type &&
 								e.type.defaultProps &&
 								(a = e.type.defaultProps),
-							t)) {
+							t))
 								P.call(t, o) &&
 									!C.hasOwnProperty(o) &&
 									(c[o] =
 										void 0 === t[o] && void 0 !== a
 											? a[o]
 											: t[o])
-							}
 						}
-						if (1 === (o = arguments.length - 2)) {
-							c.children = r
-						} else if (1 < o) {
+						if (1 === (o = arguments.length - 2)) c.children = r
+						else if (1 < o) {
 							a = Array(o)
-							for (let s = 0; s < o; s++) {
-								a[s] = arguments[s + 2]
-							}
+							for (var s = 0; s < o; s++) a[s] = arguments[s + 2]
 							c.children = a
 						}
 						return {
@@ -534,14 +496,14 @@
 							_owner: i
 						}
 					},
-					createFactory(e) {
-						const t = $.bind(null, e)
+					createFactory: function(e) {
+						var t = $.bind(null, e)
 						return (t.type = e), t
 					},
 					isValidElement: R,
 					version: '16.9.0',
-					unstable_withSuspenseConfig(e, t) {
-						const r = k.suspense
+					unstable_withSuspenseConfig: function(e, t) {
+						var r = k.suspense
 						k.suspense = void 0 === t ? null : t
 						try {
 							e()
@@ -567,33 +529,28 @@
 object-assign
 (c) Sindre Sorhus
 @license MIT
-*/ const n =
+*/ var n =
 					Object.getOwnPropertySymbols,
 				o = Object.prototype.hasOwnProperty,
 				u = Object.prototype.propertyIsEnumerable
 			function c(e) {
-				if (null == e) {
+				if (null == e)
 					throw new TypeError(
 						'Object.assign cannot be called with null or undefined'
 					)
-				}
 				return Object(e)
 			}
 			e.exports = (function() {
 				try {
-					if (!Object.assign) {
-						return !1
-					}
-					const e = new String('abc')
+					if (!Object.assign) return !1
+					var e = new String('abc')
 					if (
 						((e[5] = 'de'),
 						'5' === Object.getOwnPropertyNames(e)[0])
-					) {
+					)
 						return !1
-					}
-					for (var t = {}, r = 0; r < 10; r++) {
+					for (var t = {}, r = 0; r < 10; r++)
 						t['_' + String.fromCharCode(r)] = r
-					}
 					if (
 						'0123456789' !==
 						Object.getOwnPropertyNames(t)
@@ -601,10 +558,9 @@ object-assign
 								return t[e]
 							})
 							.join('')
-					) {
+					)
 						return !1
-					}
-					const n = {}
+					var n = {}
 					return (
 						'abcdefghijklmnopqrst'.split('').forEach(function(e) {
 							n[e] = e
@@ -623,14 +579,12 @@ object-assign
 							i < arguments.length;
 							i++
 						) {
-							for (const a in (r = Object(arguments[i]))) {
+							for (var a in (r = Object(arguments[i])))
 								o.call(r, a) && (l[a] = r[a])
-							}
 							if (n) {
 								f = n(r)
-								for (let s = 0; s < f.length; s++) {
+								for (var s = 0; s < f.length; s++)
 									u.call(r, f[s]) && (l[f[s]] = r[f[s]])
-								}
 							}
 						}
 						return l
@@ -639,10 +593,10 @@ object-assign
 		function(e, t, r) {
 			'use strict'
 			r.r(t)
-			const n = r(0),
+			var n = r(0),
 				o = r.n(n)
-			const u = () => o.a.createElement('div', null, 'Overlay')
-			const c = e =>
+			var u = () => o.a.createElement('div', null, 'Overlay')
+			var c = e =>
 				o.a.createElement(
 					'svg',
 					Object.assign(
