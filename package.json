@@ -19,7 +19,7 @@
 		"lint": "eslint . --ext=js,ts,tsx",
 		"lint:fix": "eslint . --ext=js,ts,tsx --fix",
 		"storybook": "start-storybook -p 6006",
-		"publish-package": "weback && np"
+		"publish-package": "yarn weback && yarn np"
 	},
 	"lint-staged": {
 		"*.{js,css,json,md}": [
