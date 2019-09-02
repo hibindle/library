@@ -20,8 +20,7 @@
 		"lint:fix": "eslint . --ext=js,ts,tsx --fix",
 		"storybook": "start-storybook -p 6006",
 		"webpack": "node_modules/.bin/webpack",
-		"np": "np",
-		"pp": "yarn webpack && yarn np"
+		"release": "yarn webpack && np"
 	},
 	"lint-staged": {
 		"*.{js,css,json,md}": [
