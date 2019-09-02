@@ -43,7 +43,7 @@ module.exports = {
 		]
 	},
 	output: {
-		globalObject: 'this',
+		globalObject: `(typeof self !== 'undefined' ? self : this)`,
 		path: path.resolve(__dirname, 'dist/'),
 		publicPath: '',
 		filename: 'bindle.js',
