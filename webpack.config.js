@@ -44,7 +44,11 @@ const config = {
 			'.gif',
 			'.jpg',
 			'.svg'
-		]
+		],
+		alias: {
+			shared: path.resolve(__dirname, 'src/index.ts'),
+			components: path.resolve(__dirname, 'src/components')
+		}
 	},
 	output: {
 		globalObject: `(typeof self !== 'undefined' ? self : this)`,
