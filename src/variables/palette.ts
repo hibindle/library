@@ -1,4 +1,4 @@
-module.exports = {
+export const pallette = {
 	// Colors
 	pageBackground: 'hsla(218, 36%, 96%, 1.0)', //#F0F3F8
 	darkBackground: 'hsla(60, 14%, 3%, 1.0)', //#080806

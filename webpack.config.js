@@ -1,6 +1,7 @@
 const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-module.exports = {
+const config = {
 	entry: './src/index.ts',
 
 	module: {
@@ -29,6 +30,9 @@ module.exports = {
 			}
 		]
 	},
+
+	plugins: [],
+
 	// Here we define explicitly the file types we intend to deal with
 	resolve: {
 		extensions: [
@@ -49,4 +53,15 @@ module.exports = {
 		filename: 'bindle.js',
 		libraryTarget: 'umd'
 	}
+}
+
+module.exports = (env, argv) => {
+	if (argv.mode === 'development') {
+		config.plugins = [
+			new CopyWebpackPlugin([
+				{ from: 'src', to: '../../bindle-main/_shared' }
+			])
+		]
+	}
+	return config
 }
