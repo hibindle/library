@@ -1,6 +1,6 @@
 {
 	"name": "@bindle/library",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"private": false,
 	"description": "Shared Components and Functions for bindle",
 	"homepage": "https://github.com/isaac-martin/bindle-library#readme",
