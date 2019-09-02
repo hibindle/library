@@ -6,7 +6,7 @@
 		var r = t()
 		for (var n in r) ('object' == typeof exports ? exports : e)[n] = r[n]
 	}
-})(this, function() {
+})('undefined' != typeof self ? self : this, function() {
 	return (function(e) {
 		var t = {}
 		function r(n) {
@@ -87,8 +87,8 @@
 				u = o ? Symbol.for('react.element') : 60103,
 				f = o ? Symbol.for('react.portal') : 60106,
 				c = o ? Symbol.for('react.fragment') : 60107,
-				i = o ? Symbol.for('react.strict_mode') : 60108,
-				l = o ? Symbol.for('react.profiler') : 60114,
+				l = o ? Symbol.for('react.strict_mode') : 60108,
+				i = o ? Symbol.for('react.profiler') : 60114,
 				a = o ? Symbol.for('react.provider') : 60109,
 				s = o ? Symbol.for('react.context') : 60110,
 				p = o ? Symbol.for('react.forward_ref') : 60112,
@@ -175,16 +175,16 @@
 					void 0 !== t.key && (f = '' + t.key),
 					t))
 						C.call(t, n) && !E.hasOwnProperty(n) && (o[n] = t[n])
-				var i = arguments.length - 2
-				if (1 === i) o.children = r
-				else if (1 < i) {
-					for (var l = Array(i), a = 0; a < i; a++)
-						l[a] = arguments[a + 2]
-					o.children = l
+				var l = arguments.length - 2
+				if (1 === l) o.children = r
+				else if (1 < l) {
+					for (var i = Array(l), a = 0; a < l; a++)
+						i[a] = arguments[a + 2]
+					o.children = i
 				}
 				if (e && e.defaultProps)
-					for (n in (i = e.defaultProps))
-						void 0 === o[n] && (o[n] = i[n])
+					for (n in (l = e.defaultProps))
+						void 0 === o[n] && (o[n] = l[n])
 				return {
 					$$typeof: u,
 					type: e,
@@ -234,31 +234,31 @@
 							var c = typeof t
 							;('undefined' !== c && 'boolean' !== c) ||
 								(t = null)
-							var i = !1
-							if (null === t) i = !0
+							var l = !1
+							if (null === t) l = !0
 							else
 								switch (c) {
 									case 'string':
 									case 'number':
-										i = !0
+										l = !0
 										break
 									case 'object':
 										switch (t.$$typeof) {
 											case u:
 											case f:
-												i = !0
+												l = !0
 										}
 								}
-							if (i)
+							if (l)
 								return n(o, t, '' === r ? '.' + L(t, 0) : r), 1
 							if (
-								((i = 0),
+								((l = 0),
 								(r = '' === r ? '.' : r + ':'),
 								Array.isArray(t))
 							)
-								for (var l = 0; l < t.length; l++) {
-									var a = r + L((c = t[l]), l)
-									i += e(c, a, n, o)
+								for (var i = 0; i < t.length; i++) {
+									var a = r + L((c = t[i]), i)
+									l += e(c, a, n, o)
 								}
 							else if (
 								(null === t || 'object' != typeof t
@@ -272,13 +272,13 @@
 								'function' == typeof a)
 							)
 								for (
-									t = a.call(t), l = 0;
+									t = a.call(t), i = 0;
 									!(c = t.next()).done;
 
 								)
-									i += e(
+									l += e(
 										(c = c.value),
-										(a = r + L(c, l++)),
+										(a = r + L(c, i++)),
 										n,
 										o
 									)
@@ -293,7 +293,7 @@
 										: n,
 									''
 								))
-							return i
+							return l
 					  })(e, '', t, r)
 			}
 			function L(e, t) {
@@ -454,8 +454,8 @@
 						return D().useState(e)
 					},
 					Fragment: c,
-					Profiler: l,
-					StrictMode: i,
+					Profiler: i,
+					StrictMode: l,
 					Suspense: y,
 					unstable_SuspenseList: d,
 					createElement: $,
@@ -464,10 +464,10 @@
 						var o = void 0,
 							f = n({}, e.props),
 							c = e.key,
-							i = e.ref,
-							l = e._owner
+							l = e.ref,
+							i = e._owner
 						if (null != t) {
-							void 0 !== t.ref && ((i = t.ref), (l = P.current)),
+							void 0 !== t.ref && ((l = t.ref), (i = P.current)),
 								void 0 !== t.key && (c = '' + t.key)
 							var a = void 0
 							for (o in (e.type &&
@@ -491,9 +491,9 @@
 							$$typeof: u,
 							type: e.type,
 							key: c,
-							ref: i,
+							ref: l,
 							props: f,
-							_owner: l
+							_owner: i
 						}
 					},
 					createFactory: function(e) {
@@ -575,19 +575,19 @@ object-assign
 				? Object.assign
 				: function(e, t) {
 						for (
-							var r, c, i = f(e), l = 1;
-							l < arguments.length;
-							l++
+							var r, c, l = f(e), i = 1;
+							i < arguments.length;
+							i++
 						) {
-							for (var a in (r = Object(arguments[l])))
-								o.call(r, a) && (i[a] = r[a])
+							for (var a in (r = Object(arguments[i])))
+								o.call(r, a) && (l[a] = r[a])
 							if (n) {
 								c = n(r)
 								for (var s = 0; s < c.length; s++)
-									u.call(r, c[s]) && (i[c[s]] = r[c[s]])
+									u.call(r, c[s]) && (l[c[s]] = r[c[s]])
 							}
 						}
-						return i
+						return l
 				  }
 		},
 		function(e, t, r) {
