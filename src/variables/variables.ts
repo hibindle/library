@@ -1,4 +1,4 @@
-module.exports = {
+export const variables = {
 	// Whitespace
 	whitespaceSmallest: '0.2rem',
 	whitespaceSmall: '0.4rem',

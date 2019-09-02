@@ -19,8 +19,9 @@
 		"lint": "eslint . --ext=js,ts,tsx",
 		"lint:fix": "eslint . --ext=js,ts,tsx --fix",
 		"storybook": "start-storybook -p 6006",
-		"webpack": "node_modules/.bin/webpack",
-		"release": "yarn webpack && np"
+		"webpack": "node_modules/.bin/webpack --mode=production",
+		"release": "yarn webpack && np",
+		"watch": "webpack --watch --progress --mode=development"
 	},
 	"lint-staged": {
 		"*.{js,css,json,md}": [
@@ -53,6 +54,7 @@
 		"@typescript-eslint/parser": "~2.0.0",
 		"babel-loader": "^8.0.6",
 		"chalk": "^2.4.2",
+		"copy-webpack-plugin": "^5.0.4",
 		"eslint": "^6.3.0",
 		"eslint-config-prettier": "~6.1.0",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
