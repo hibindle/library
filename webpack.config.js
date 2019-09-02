@@ -43,6 +43,7 @@ module.exports = {
 		]
 	},
 	output: {
+		globalObject: 'this',
 		path: path.resolve(__dirname, 'dist/'),
 		publicPath: '',
 		filename: 'bindle.js',
