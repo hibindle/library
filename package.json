@@ -35,6 +35,7 @@
 		"eslint-plugin-react-hooks": "~2.0.1",
 		"git-scripts": "^0.2.1",
 		"lint-staged": "^9.2.5",
+		"np": "^5.0.3",
 		"prettier": "~1.18.2",
 		"react": "^16.7.0",
 		"react-dom": "^16.7.0",
@@ -54,5 +55,15 @@
 			"commit-msg": "./scripts/commit-msg $1",
 			"pre-commit": "./node_modules/.bin/lint-staged"
 		}
-	}
+	},
+	"description": "Shared Components and Functions for bindle",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/isaac-martin/bindle-library.git"
+	},
+	"author": "",
+	"bugs": {
+		"url": "https://github.com/isaac-martin/bindle-library/issues"
+	},
+	"homepage": "https://github.com/isaac-martin/bindle-library#readme"
 }
