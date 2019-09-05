@@ -49,7 +49,8 @@
 		"@storybook/react": "^5.1.11",
 		"@types/react": "^16.7.18",
 		"@types/react-dom": "^16.0.11",
-		"@types/styled-components": "^4.1.4",
+		"@types/storybook__react": "~4.0.2",
+		"@types/styled-components": "~4.1.18",
 		"@typescript-eslint/eslint-plugin": "^2.0.0",
 		"@typescript-eslint/parser": "~2.0.0",
 		"babel-loader": "^8.0.6",
@@ -76,5 +77,8 @@
 			"commit-msg": "./scripts/commit-msg $1",
 			"pre-commit": "./node_modules/.bin/lint-staged"
 		}
+	},
+	"dependencies": {
+		"styled-normalize": "~8.0.6"
 	}
 }
