@@ -1,13 +1,20 @@
 import React from 'react'
-import StyledHeader from './styles'
+import { SCHeader, SCHeaderContent } from './styles'
 import Logo from '../../icons/Logo'
 
-const Header = ({ children }) => {
+interface Props {
+	navItems: any
+	btn: any
+}
+
+const Header: React.FunctionComponent<Props> = ({ navItems, btn }) => {
 	return (
-		<StyledHeader>
+		<SCHeader>
 			<Logo />
-			<div>{children}</div>
-		</StyledHeader>
+			<SCHeaderContent>
+				{navItems} {btn}
+			</SCHeaderContent>
+		</SCHeader>
 	)
 }
 

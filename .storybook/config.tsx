@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { configure, addDecorator } from '@storybook/react'
-import GlobalStyle from '../src/components/GlobalStyle'
+import GlobalStyle from '../src/GlobalStyle'
 import './storybook.css'
 
 const req = require.context('../src', true, /.stories.tsx$/)

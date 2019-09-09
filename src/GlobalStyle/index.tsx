@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
   body {
    font-family: 'IBM Plex Sans', sans-serif!important;
-   background: black!important;
   }
 `
 
