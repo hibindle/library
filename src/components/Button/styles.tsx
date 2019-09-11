@@ -13,7 +13,7 @@ const handleBtnType = modifier => {
 			color: ${palette.brandRed}; 
 			background: transparent;
 			&:hover {
-				background: ${palette.brandRedDark};
+				background: ${palette.brandRedLight};
 				color: ${palette.brandWhite};
 			}
 			`
@@ -22,7 +22,7 @@ const handleBtnType = modifier => {
 			color: ${palette.brandWhite}; 
 			background: ${palette.brandRed};
 			&:hover {
-    		background: ${palette.brandRedDark};
+    		background: ${palette.brandRed};
   		}
 			`
 	}

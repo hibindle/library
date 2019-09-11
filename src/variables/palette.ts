@@ -4,6 +4,7 @@ export const palette = {
 	darkBackground: 'hsla(60, 14%, 3%, 1.0)', //#080806
 	brandRed: 'hsla(357.1, 99%, 63%, 1.0)', //#fe434c
 	brandRedDark: 'hsla(357, 78%, 53%, 1.0)', // #E52A33
+	brandRedLight: 'hsla(357, 100%, 68%, 1.0)', // #FF5D66
 	copyWhite: 'hsla(0, 0%, 100%, 1.0)', //#FFF
 	copyDark: 'hsla(201, 9%, 55%, 1.0)', //#818E95
 	brandWhite: 'hsla(0, 0%, 100%, 1.0)' //#FFF
