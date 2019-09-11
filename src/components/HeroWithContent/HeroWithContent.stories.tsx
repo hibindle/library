@@ -3,28 +3,33 @@ import { storiesOf } from '@storybook/react'
 import { HeroWithContent } from './HeroWithContent'
 
 const content = <div>hi</div>
+const imgUrl = `//images.unsplash.com/photo-1562184760-a11b3cf7c169?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80`
 
 storiesOf('Hero With Content', module)
 	.add('Content Right', () => (
-		<div className="BNDSB-wrapper">
+		<div className="BNDSB-page-wrapper">
 			<HeroWithContent
 				contentPosition="right"
 				content={content}
-				image={'wassup'}
+				image={imgUrl}
 			></HeroWithContent>
 		</div>
 	))
 	.add('Content Left', () => (
-		<HeroWithContent
-			contentPosition="left"
-			content={content}
-			image="wassup"
-		></HeroWithContent>
+		<div className="BNDSB-page-wrapper">
+			<HeroWithContent
+				contentPosition="left"
+				content={content}
+				image={imgUrl}
+			></HeroWithContent>
+		</div>
 	))
 	.add('Content Bottom', () => (
-		<HeroWithContent
-			contentPosition="bottom"
-			content={content}
-			image="wassup"
-		></HeroWithContent>
+		<div className="BNDSB-page-wrapper">
+			<HeroWithContent
+				contentPosition="bottom"
+				content={content}
+				image={imgUrl}
+			></HeroWithContent>
+		</div>
 	))

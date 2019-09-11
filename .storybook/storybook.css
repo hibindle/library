@@ -6,3 +6,12 @@
 .BNDSB-story-wrapper {
 	margin: 0 20px;
 }
+
+.BNDSB-page-wrapper {
+	max-width: 1000px;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	border: 1px solid gray;
+	margin: 30px auto;
+}

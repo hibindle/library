@@ -6,7 +6,6 @@ import { variables } from '../../variables/variables'
 import { typography } from '../../variables/typography'
 
 const handleBtnType = modifier => {
-	console.warn(modifier)
 	switch (modifier) {
 		case 'outline':
 			return `
@@ -55,7 +54,7 @@ const SCButton = styled('button')<SCProps>`
 	${padding(variables.whitespaceSmallLess, variables.whitespaceLargeBase)};
 	border: 1px solid;
 	outline: none;
-	border-radius: ${variables.borderRadiusBase};
+	border-radius: ${variables.borderRadiusXLarge};
 	font-family: 'IBM Plex Mono';
 	font-size: ${typography.eta};
 	cursor: pointer;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { SCHeroWithContent } from './styles'
+import { SCHeroWithContent, SCImageWrap, SCContentWrap } from './styles'
 
 export interface SCProps {
 	contentPosition?: string
@@ -7,16 +7,22 @@ export interface SCProps {
 
 interface ConProps {
 	content: any
-	image: any
+	image: string
 }
 
 type Props = SCProps & ConProps
 
-const HeroWithContent: React.SFC<Props> = ({ image, content }) => {
+const HeroWithContent: React.SFC<Props> = ({
+	image,
+	content,
+	contentPosition
+}) => {
 	return (
 		<SCHeroWithContent>
-			{content}
-			{image}
+			<SCContentWrap contentPosition={contentPosition}>
+				{content}
+			</SCContentWrap>
+			<SCImageWrap contentPosition={contentPosition} src={image} />
 		</SCHeroWithContent>
 	)
 }
