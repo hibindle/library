@@ -12,8 +12,16 @@ export interface BtnProps {
 
 type Props = SCProps & BtnProps
 
-export const Button: React.SFC<Props> = ({ onClick, children }) => {
-	return <StyledButton onClick={onClick}>{children}</StyledButton>
+export const Button: React.FunctionComponent<Props> = ({
+	children,
+	onClick,
+	modifier
+}) => {
+	return (
+		<StyledButton modifier={modifier} onClick={onClick}>
+			{children}
+		</StyledButton>
+	)
 }
 
 export default Button

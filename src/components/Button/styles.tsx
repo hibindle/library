@@ -1,22 +1,48 @@
 import styled from 'styled-components'
+import { SCProps } from './index'
 import { palette } from '../../variables/palette'
 import { padding } from 'polished'
 import { variables } from '../../variables/variables'
+import { typography } from '../../variables/typography'
 
-const SCButton = styled('button')`
-	display: flex;
-	align-items: center;
-	justify-content: center;
+const handleBtnType = modifier => {
+	console.warn(modifier)
+	switch (modifier) {
+		case 'outline':
+			return `
+			color: ${palette.brandRed}; 
+			background: transparent;
+			&:hover {
+				background: ${palette.brandRedDark};
+				color: ${palette.brandWhite};
+			}
+			`
+		default:
+			return `
+			color: ${palette.brandWhite}; 
+			background: ${palette.brandRed};
+			&:hover {
+    		background: ${palette.brandRedDark};
+  		}
+			`
+	}
+}
+
+const SCButton = styled('button')<SCProps>`
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: bottom;
 	color: ${palette.brandWhite};
-	background: ${palette.brandRed};
-	padding: ${padding(
-		variables.whitespaceSmall,
-		variables.whitespaceSmallLess
-	)};
-	border: none;
+	${padding(variables.whitespaceSmallLess, variables.whitespaceLargeBase)};
+	border: 1px solid ${palette.brandRed};
 	outline: none;
 	border-radius: ${variables.borderRadiusBase};
 	font-family: 'IBM Plex Mono';
+	font-size: ${typography.eta};
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	${({ modifier }) => handleBtnType(modifier)};
 `
 
 export default SCButton
