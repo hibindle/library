@@ -13,5 +13,15 @@ storiesOf('Button', module).add('Variations', () => (
 				Outline Button
 			</Button>
 		</div>
+		<div className="BNDSB-comp-wrapper">
+			<Button modifier="black" onClick={action('clicked')}>
+				Black Button
+			</Button>
+		</div>
+		<div className="BNDSB-comp-wrapper">
+			<Button modifier="outlineBlack" onClick={action('clicked')}>
+				Outline Button Black
+			</Button>
+		</div>
 	</div>
 ))

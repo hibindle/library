@@ -17,6 +17,24 @@ const handleBtnType = modifier => {
 				color: ${palette.brandWhite};
 			}
 			`
+		case 'outlineBlack':
+			return `
+			color: ${palette.brandBlack}; 
+			border-color: ${palette.brandBlack}
+			background: transparent;
+			&:hover {
+				background: ${palette.brandBlack};
+				color: ${palette.brandWhite};
+			}
+			`
+		case 'black':
+			return `
+			color: ${palette.brandWhite}; 
+			background: ${palette.brandBlack};
+			&:hover {
+				background: ${palette.brandBlackLight};
+			}
+			`
 		default:
 			return `
 			color: ${palette.brandWhite}; 
@@ -35,7 +53,7 @@ const SCButton = styled('button')<SCProps>`
 	vertical-align: bottom;
 	color: ${palette.brandWhite};
 	${padding(variables.whitespaceSmallLess, variables.whitespaceLargeBase)};
-	border: 1px solid ${palette.brandRed};
+	border: 1px solid;
 	outline: none;
 	border-radius: ${variables.borderRadiusBase};
 	font-family: 'IBM Plex Mono';

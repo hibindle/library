@@ -7,5 +7,7 @@ export const palette = {
 	brandRedLight: 'hsla(357, 100%, 68%, 1.0)', // #FF5D66
 	copyWhite: 'hsla(0, 0%, 100%, 1.0)', //#FFF
 	copyDark: 'hsla(201, 9%, 55%, 1.0)', //#818E95
-	brandWhite: 'hsla(0, 0%, 100%, 1.0)' //#FFF
+	brandWhite: 'hsla(0, 0%, 100%, 1.0)', //#FFF
+	brandBlack: `hsla(180, 2%, 13%, 1.0)`, // #202121
+	brandBlackLight: `hsla(180, 1%, 23%, 1.0)` // #3A3B3B
 }
