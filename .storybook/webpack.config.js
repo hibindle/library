@@ -1,4 +1,7 @@
-module.exports = ({ config, mode }) => {
+const path = require('path')
+const custom = require('../webpack.config.js')
+
+module.exports = ({ config }) => {
 	config.module.rules.push({
 		test: /\.(ts|tsx)$/,
 		loader: require.resolve('babel-loader'),
@@ -6,6 +9,23 @@ module.exports = ({ config, mode }) => {
 			presets: [['react-app', { flow: false, typescript: true }]]
 		}
 	})
-	config.resolve.extensions.push('.ts', '.tsx')
+	config.resolve.extensions.push(
+		'.ts',
+		'.tsx',
+		'.js',
+		'.json',
+		'.png',
+		'.gif',
+		'.jpg',
+		'.svg'
+	)
+	config.resolve.alias = {
+		...config.resolve.alias,
+		components: path.resolve(__dirname, '../src/components'),
+		icons: path.resolve(__dirname, '../src/icons'),
+		variables: path.resolve(__dirname, '../src/variables'),
+		Typography: path.resolve(__dirname, '../src/Typography'),
+		'~': path.resolve(__dirname, '../src')
+	}
 	return config
 }

@@ -46,8 +46,12 @@ const config = {
 			'.svg'
 		],
 		alias: {
-			shared: path.resolve(__dirname, 'src/index.ts'),
-			components: path.resolve(__dirname, 'src/components')
+			'~': path.resolve(__dirname, './src'),
+			shared: path.resolve(__dirname, './src/index.ts'),
+			components: path.resolve(__dirname, './src/components'),
+			Typography: path.resolve(__dirname, './src/Typography'),
+			variables: path.resolve(__dirname, './src/variables'),
+			icons: path.resolve(__dirname, './src/icons')
 		}
 	},
 	output: {

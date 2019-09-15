@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { palette } from '../variables/palette'
+import { palette } from 'variables/palette'
 import { margin } from 'polished'
-import { variables } from '../variables/variables'
-import { typography } from '../variables/typography'
+import { variables } from 'variables/variables'
+import { typography } from 'variables/typography'
 
 interface TypeProps {
 	color?: string
@@ -12,7 +12,6 @@ const sharedTypeStyles = color => {
 	return `
   color: ${color ? palette[color] : palette.copyDark};
   font-family: 'IBM Plex Sans';
-	${margin(0, 0, variables.whitespaceSmall)};
   `
 }
 
@@ -22,6 +21,7 @@ const H1 = styled('h1')<TypeProps>`
 
 const H2 = styled('h2')<TypeProps>`
 	font-size: ${typography.kilo} ${({ color }) => sharedTypeStyles(color)};
+	${margin(0, null, variables.whitespaceSmall)};
 `
 
 const P = styled('p')<TypeProps>`

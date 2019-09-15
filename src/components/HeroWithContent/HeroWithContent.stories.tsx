@@ -1,8 +1,18 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { HeroWithContent } from './HeroWithContent'
+import { action } from '@storybook/addon-actions'
+import { HeroWithContent } from 'components/HeroWithContent'
+import { H2, P } from '/Typography'
+import Button from 'components/Button'
 
-const content = <div>hi</div>
+const content = (
+	<div>
+		<H2>Join us today</H2>
+		<P>We need you or we will die a horrible horrible death</P>
+		<Button onClick={action('clicked')}>Submit Now</Button>
+	</div>
+)
+
 const imgUrl = `//images.unsplash.com/photo-1562184760-a11b3cf7c169?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80`
 
 storiesOf('Hero With Content', module)

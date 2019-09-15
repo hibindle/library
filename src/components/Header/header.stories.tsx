@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import Header from './index'
-import Button from '../Button/index'
+import Button from 'components/Button'
 
 const button = <Button onClick={action('clicked')}>Sign Up</Button>
 const navItems = (

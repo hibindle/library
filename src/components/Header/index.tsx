@@ -1,6 +1,6 @@
 import React from 'react'
 import { SCHeader, SCHeaderContent } from './styles'
-import Logo from '../../icons/Logo'
+import Logo from 'icons/Logo'
 
 interface Props {
 	navItems: any

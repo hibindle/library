@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { SCProps } from './index'
-import { palette } from '../../variables/palette'
-import { padding } from 'polished'
-import { variables } from '../../variables/variables'
-import { typography } from '../../variables/typography'
+import { palette } from 'variables/palette'
+import { padding, margin } from 'polished'
+import { variables } from 'variables/variables'
+import { typography } from 'variables/typography'
 
 const handleBtnType = modifier => {
 	switch (modifier) {
@@ -46,12 +46,14 @@ const handleBtnType = modifier => {
 }
 
 const SCButton = styled('button')<SCProps>`
-	display: inline-block;
+	display: block;
 	white-space: nowrap;
 	text-align: center;
 	vertical-align: bottom;
 	color: ${palette.brandWhite};
 	${padding(variables.whitespaceSmallLess, variables.whitespaceLargeBase)};
+	${margin(variables.whitespaceSmallLess, null, null)};
+
 	border: 1px solid;
 	outline: none;
 	border-radius: ${variables.borderRadiusXLarge};

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { palette } from '../../variables/palette'
+import { palette } from 'variables/palette'
 
 const SCCardBase = styled('div')`
 	display: flex;
