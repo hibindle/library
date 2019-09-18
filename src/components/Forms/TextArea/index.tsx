@@ -1,28 +1,26 @@
 import React from 'react'
 import { camelCase } from 'lodash'
-import { SCInput, SCLabel, SCFieldWrap } from './styles'
+import { FieldWrap, SCLabel } from '../styles'
+import { SCTextArea } from './styles'
 
 export interface Props {
-	type: string
 	name: string
-	placeholder?: string
+	resizeable?: boolean
 }
 
 export const TextArea: React.FunctionComponent<Props> = ({
-	type,
 	name,
-	placeholder
+	resizeable = false
 }) => {
 	return (
-		<SCFieldWrap>
-			<SCInput
-				id={camelCase(name)}
-				type={type}
-				name={camelCase(name)}
-				placeholder={placeholder}
-			/>
+		<FieldWrap>
 			<SCLabel htmlFor={camelCase(name)}>{name}</SCLabel>
-		</SCFieldWrap>
+			<SCTextArea
+				id={camelCase(name)}
+				name={camelCase(name)}
+				resizeable={resizeable}
+			/>
+		</FieldWrap>
 	)
 }
 

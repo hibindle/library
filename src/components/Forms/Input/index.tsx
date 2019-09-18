@@ -1,6 +1,7 @@
 import React from 'react'
 import { camelCase } from 'lodash'
-import { SCInput, SCLabel, SCFieldWrap } from './styles'
+import { SCInput } from './styles'
+import { FieldWrap, SCLabel } from '../styles'
 
 export interface Props {
 	type: string
@@ -14,7 +15,7 @@ export const Input: React.FunctionComponent<Props> = ({
 	placeholder
 }) => {
 	return (
-		<SCFieldWrap>
+		<FieldWrap>
 			<SCInput
 				id={camelCase(name)}
 				type={type}
@@ -22,7 +23,7 @@ export const Input: React.FunctionComponent<Props> = ({
 				placeholder={placeholder}
 			/>
 			<SCLabel htmlFor={camelCase(name)}>{name}</SCLabel>
-		</SCFieldWrap>
+		</FieldWrap>
 	)
 }
 
