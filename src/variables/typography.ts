@@ -12,6 +12,7 @@ export const typography = {
 	zeta: '1.4rem',
 	eta: '1.2rem',
 	theta: '1rem',
+	iota: '0.9rem',
 
 	kilo: '2.8rem',
 	mega: '3.6rem',
