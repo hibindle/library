@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import { padding } from 'polished'
-import { palette } from 'variables/palette'
 import { SCProps } from '.'
-import { variables } from 'variables/variables'
+import { variables, palette } from 'variables'
 
 const handleImgDir = modifier => {
 	switch (modifier) {

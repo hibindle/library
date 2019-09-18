@@ -11,6 +11,9 @@ export const variables = {
 	whitespaceLargeMore: '3.2rem',
 	whitespaceExtraLargeLess: '3.6rem',
 
+	// Shadows
+	cardShadow: `0 1px 4px rgba(45, 54, 59, .25)`,
+
 	// Border radii
 	borderRadiusSmall: '2px',
 	borderRadiusBase: '4px',

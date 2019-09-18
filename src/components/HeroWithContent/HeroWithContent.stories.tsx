@@ -17,7 +17,7 @@ const imgUrl = `//images.unsplash.com/photo-1562184760-a11b3cf7c169?ixlib=rb-1.2
 
 storiesOf('Hero With Content', module)
 	.add('Content Right', () => (
-		<div className="BNDSB-page-wrapper">
+		<div className="BNDSB-hero-wrapper">
 			<HeroWithContent
 				contentPosition="right"
 				content={content}
@@ -26,7 +26,7 @@ storiesOf('Hero With Content', module)
 		</div>
 	))
 	.add('Content Left', () => (
-		<div className="BNDSB-page-wrapper">
+		<div className="BNDSB-hero-wrapper">
 			<HeroWithContent
 				contentPosition="left"
 				content={content}
@@ -35,7 +35,7 @@ storiesOf('Hero With Content', module)
 		</div>
 	))
 	.add('Content Bottom', () => (
-		<div className="BNDSB-page-wrapper">
+		<div className="BNDSB-hero-wrapper">
 			<HeroWithContent
 				contentPosition="bottom"
 				content={content}

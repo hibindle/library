@@ -49,8 +49,9 @@ const config = {
 			'~': path.resolve(__dirname, './src'),
 			shared: path.resolve(__dirname, './src/index.ts'),
 			components: path.resolve(__dirname, './src/components'),
+			illustrations: path.resolve(__dirname, './src/illustrations'),
 			Typography: path.resolve(__dirname, './src/Typography'),
-			variables: path.resolve(__dirname, './src/variables'),
+			variables: path.resolve(__dirname, './src/variables/index.ts'),
 			icons: path.resolve(__dirname, './src/icons')
 		}
 	},

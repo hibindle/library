@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { padding } from 'polished'
-import { variables, palette, typography } from 'variables/index'
+import { variables, palette, typography } from 'variables'
 
 const FieldWrap = styled('div')`
 	display: flex;

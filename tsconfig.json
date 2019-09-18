@@ -12,8 +12,9 @@
 		"lib": ["dom", "es7"],
 		"baseUrl": ".",
 		"paths": {
-			"variables/*": ["./src/variables/*"],
+			"variables/*": ["./src/variables/index.ts"],
 			"components/*": ["./src/components/*"],
+			"illustrations/*": ["./src/illustrations/*"],
 			"icons/*": ["./src/icons/*"],
 			"Typography/*": ["./src/Typography/*"],
 			"~/*": ["./src/*"]

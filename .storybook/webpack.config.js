@@ -21,10 +21,12 @@ module.exports = ({ config }) => {
 	)
 	config.resolve.alias = {
 		...config.resolve.alias,
+		// ...custom.config.resolve,
 		components: path.resolve(__dirname, '../src/components'),
 		icons: path.resolve(__dirname, '../src/icons'),
-		variables: path.resolve(__dirname, '../src/variables'),
+		illustrations: path.resolve(__dirname, '../src/illustrations'),
 		Typography: path.resolve(__dirname, '../src/Typography'),
+		variables: path.resolve(__dirname, '../src/variables/index.ts'),
 		'~': path.resolve(__dirname, '../src')
 	}
 	return config

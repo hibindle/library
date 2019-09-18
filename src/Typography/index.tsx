@@ -1,9 +1,6 @@
 import styled from 'styled-components'
-import { palette } from 'variables/palette'
 import { margin } from 'polished'
-import { variables } from 'variables/variables'
-import { typography } from 'variables/typography'
-
+import { variables, typography, palette } from 'variables'
 interface TypeProps {
 	color?: string
 }

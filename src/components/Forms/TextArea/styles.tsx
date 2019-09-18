@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Props } from './index'
 import { padding } from 'polished'
-import { variables, palette } from 'variables/index'
+import { variables, palette } from 'variables'
 
 const SCTextArea = styled('textarea')<Props>`
 	border: 1px solid ${palette.brandBlack};

@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 import { SCProps } from './index'
-import { palette } from 'variables/palette'
 import { padding, margin } from 'polished'
-import { variables } from 'variables/variables'
-import { typography } from 'variables/typography'
+import { variables, typography, palette } from 'variables'
 
 const handleBtnType = modifier => {
 	switch (modifier) {

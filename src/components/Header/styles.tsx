@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { padding } from 'polished'
-import { variables } from 'variables/variables'
+import { variables } from 'variables'
 
 const SCHeader = styled('header')`
 	display: flex;

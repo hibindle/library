@@ -1,6 +1,7 @@
 export const palette = {
 	// Colors
-	pageBackground: 'hsla(218, 36%, 96%, 1.0)', //#F0F3F8
+	pageBackground: 'hsla(214, 33%, 96%, 1.0)', //#f1f4f8
+	cardBackground: 'hsla(0, 0%, 96%, 1.0)', //#f5f5f5
 	darkBackground: 'hsla(60, 14%, 3%, 1.0)', //#080806
 	brandRed: 'hsla(357.1, 99%, 63%, 1.0)', //#fe434c
 	brandRedDark: 'hsla(357, 78%, 53%, 1.0)', // #E52A33
