@@ -32,6 +32,7 @@ const H4 = styled('h4')<TypeProps>`
 
 const P = styled('p')<TypeProps>`
 	font-size: ${typography.zeta} ${({ color }) => sharedTypeStyles(color)};
+	text-align: left;
 `
 
 const Bold = styled(P)<TypeProps>`
