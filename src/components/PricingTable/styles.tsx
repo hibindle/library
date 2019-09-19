@@ -1,15 +1,18 @@
 import styled from 'styled-components'
-import { palette } from 'variables'
 
 const SCPricing = styled('div')`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	border: 1px solid red;
-	background: ${palette.brandRed};
 `
 
-const SCPriceList = styled('ul')``
+const SCPriceList = styled('ul')`
+	display: block;
+	padding: 0;
+`
 
-const SCPriceItem = styled('li')``
+const SCPriceItem = styled('li')`
+	display: block;
+`
 
 export { SCPricing, SCPriceList, SCPriceItem }

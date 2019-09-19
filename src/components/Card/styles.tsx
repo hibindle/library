@@ -5,6 +5,7 @@ import { padding } from 'polished'
 
 const SCCardBase = styled('article')<Props>`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	border: 1px solid ${palette.brandBlackLight};
 	border-radius: ${variables.borderRadiusBase};

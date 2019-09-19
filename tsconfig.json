@@ -16,7 +16,7 @@
 			"components/*": ["./src/components/*"],
 			"illustrations/*": ["./src/illustrations/*"],
 			"icons/*": ["./src/icons/*"],
-			"Typography/*": ["./src/Typography/*"],
+			"Typography": ["./src/Typography/index.tsx"],
 			"~/*": ["./src/*"]
 		}
 	},

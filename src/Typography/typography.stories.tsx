@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { H1, H2, P, Bold, Light, A } from './index'
+import { H1, H2, P, Bold, Light, A } from 'Typography'
 
 storiesOf('Typography', module).add('Type', () => (
 	<div className="BNDSB-wrapper">

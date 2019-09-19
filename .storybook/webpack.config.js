@@ -25,7 +25,7 @@ module.exports = ({ config }) => {
 		components: path.resolve(__dirname, '../src/components'),
 		icons: path.resolve(__dirname, '../src/icons'),
 		illustrations: path.resolve(__dirname, '../src/illustrations'),
-		Typography: path.resolve(__dirname, '../src/Typography'),
+		Typography: path.resolve(__dirname, '../src/Typography/index.tsx'),
 		variables: path.resolve(__dirname, '../src/variables/index.ts'),
 		'~': path.resolve(__dirname, '../src')
 	}

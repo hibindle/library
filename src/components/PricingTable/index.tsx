@@ -8,7 +8,7 @@ export interface PTProps {
 	title: string
 }
 
-export const PricingTable: React.FunctionComponent<PTProps> = ({
+const PricingTable: React.FunctionComponent<PTProps> = ({
 	price,
 	title,
 	features

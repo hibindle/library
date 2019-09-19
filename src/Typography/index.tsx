@@ -21,6 +21,15 @@ const H2 = styled('h2')<TypeProps>`
 	${margin(0, null, variables.whitespaceSmall)};
 `
 
+const H3 = styled('h3')<TypeProps>`
+	font-size: ${typography.giga} ${({ color }) => sharedTypeStyles(color)};
+`
+
+const H4 = styled('h4')<TypeProps>`
+	font-size: ${typography.kilo} ${({ color }) => sharedTypeStyles(color)};
+	${margin(0, null, variables.whitespaceSmall)};
+`
+
 const P = styled('p')<TypeProps>`
 	font-size: ${typography.zeta} ${({ color }) => sharedTypeStyles(color)};
 `
@@ -39,4 +48,4 @@ const A = styled('a')<TypeProps>`
 	border-bottom: 2px solid ${palette.brandRed};
 `
 
-export { H1, H2, P, Bold, Light, A }
+export { H1, H2, H3, H4, P, Bold, Light, A }

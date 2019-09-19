@@ -1,9 +1,8 @@
 import React from 'react'
 import { SCButton } from './styles'
-import { Url } from 'url'
 
 export interface LinkProps {
-	href?: Url
+	href?: string
 	modifier?: string
 }
 
