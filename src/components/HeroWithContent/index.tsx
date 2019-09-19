@@ -6,7 +6,7 @@ export interface SCProps {
 }
 
 interface ConProps {
-	content: any
+	content: React.ReactNode
 	image: string
 }
 

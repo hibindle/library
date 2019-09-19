@@ -1,26 +1,20 @@
 import React from 'react'
-import StyledButton from './styles'
+import { SCButton } from './styles'
 
-export interface SCProps {
+export interface BtnProps {
+	onClick?: any
 	modifier?: string
 }
 
-export interface BtnProps {
-	onClick: any
-	children: any
-}
-
-type Props = SCProps & BtnProps
-
-export const Button: React.FunctionComponent<Props> = ({
+const Button: React.FunctionComponent<BtnProps> = ({
 	children,
 	onClick,
 	modifier
 }) => {
 	return (
-		<StyledButton modifier={modifier} onClick={onClick}>
+		<SCButton modifier={modifier} onClick={onClick}>
 			{children}
-		</StyledButton>
+		</SCButton>
 	)
 }
 

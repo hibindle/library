@@ -1,8 +1,29 @@
 import React from 'react'
-import CardBase from './styles'
+import { SCPricing, SCPriceList, SCPriceItem } from './styles'
+import { H3, H4 } from 'Typography'
 
-const PricingTable = ({ children }) => {
-	return <CardBase>{children}</CardBase>
+export interface PTProps {
+	features: Array<string>
+	price: string
+	title: string
+}
+
+export const PricingTable: React.FunctionComponent<PTProps> = ({
+	price,
+	title,
+	features
+}) => {
+	return (
+		<SCPricing>
+			<H3>{title}</H3>
+			<SCPriceList>
+				{features.map(feature => (
+					<SCPriceItem>{feature}</SCPriceItem>
+				))}
+			</SCPriceList>
+			<H4>{price}</H4>
+		</SCPricing>
+	)
 }
 
 export default PricingTable

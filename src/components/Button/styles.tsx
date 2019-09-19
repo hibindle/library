@@ -1,7 +1,10 @@
 import styled from 'styled-components'
-import { SCProps } from './index'
+import { LinkProps } from './LinkAsButton'
+import { BtnProps } from './index'
 import { padding, margin } from 'polished'
 import { variables, typography, palette } from 'variables'
+
+type Props = LinkProps & BtnProps
 
 const handleBtnType = modifier => {
 	switch (modifier) {
@@ -37,21 +40,20 @@ const handleBtnType = modifier => {
 			color: ${palette.brandWhite}; 
 			background: ${palette.brandRed};
 			&:hover {
-    		background: ${palette.brandRed};
+    		background: ${palette.brandRedDark};
   		}
 			`
 	}
 }
 
-const SCButton = styled('button')<SCProps>`
-	display: block;
+const SCButton = styled('button')<Props>`
+	display: initial;
 	white-space: nowrap;
 	text-align: center;
 	vertical-align: bottom;
 	color: ${palette.brandWhite};
 	${padding(variables.whitespaceSmallLess, variables.whitespaceLargeBase)};
 	${margin(variables.whitespaceSmallLess, null, null)};
-
 	border: 1px solid;
 	outline: none;
 	border-radius: ${variables.borderRadiusXLarge};
@@ -60,6 +62,7 @@ const SCButton = styled('button')<SCProps>`
 	cursor: pointer;
 	transition: background-color 0.2s ease;
 	${({ modifier }) => handleBtnType(modifier)};
+	text-decoration: none;
 `
 
-export default SCButton
+export { SCButton }

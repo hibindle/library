@@ -1,8 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import Button from './index'
-import LinkAsButton from './LinkAsButton'
+import PricingCard from './index'
 
 const variations = [
 	{ text: 'Outline button', modifier: 'outline' },
@@ -11,15 +10,17 @@ const variations = [
 	{ text: 'Black outline', modifier: 'outlineBlack' }
 ]
 
-storiesOf('Button', module).add('Variations', () => (
+storiesOf('PricingCard', module).add('Variations', () => (
 	<div className="BNDSB-story-wrapper">
 		{variations.map(btn => (
 			<div className="BNDSB-comp-wrapper">
-				<Button modifier={btn.modifier} onClick={action('clicked')}>
+				<PricingCard
+					modifier={btn.modifier}
+					onClick={action('clicked')}
+				>
 					{btn.text}
-				</Button>
+				</PricingCard>
 			</div>
 		))}
-		<LinkAsButton href={'https://bindle.space'}>Hey Yo</LinkAsButton>
 	</div>
 ))
