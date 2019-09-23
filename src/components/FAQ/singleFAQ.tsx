@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { SCFAQ, FAQContent, FAQTitle } from './styles'
+import Plus from 'icons/Plus'
+import Minus from 'icons/Minus'
 
 export interface FAQProps {
 	title: string
@@ -8,14 +10,13 @@ export interface FAQProps {
 
 const FAQ: React.FunctionComponent<FAQProps> = ({ title, content }) => {
 	const [isOpen, setOpen] = useState(false)
-	// const icon = isOpen ? <Plus/> : <Minus/>
-	const icon = isOpen ? '+' : '-'
+	const icon = isOpen ? <Plus /> : <Minus />
 
 	return (
 		<SCFAQ onClick={() => setOpen(!isOpen)}>
 			<FAQTitle>
 				{title}
-				<span>{icon}</span>
+				{icon}
 			</FAQTitle>
 			{isOpen && <FAQContent>{content}</FAQContent>}
 		</SCFAQ>
