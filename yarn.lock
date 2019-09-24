@@ -918,6 +918,26 @@
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
   integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
+"@kiwicom/js@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@kiwicom/js/-/js-0.9.0.tgz#67032574d8ee318cd747001a7b4c87013214327a"
+  integrity sha512-CwDiWwLWE0iWzCrL08x7jdEySAIVdmcmF/rik8gjK5oW4jA5G9fOBxsSSVm2bLtq8HG9KIz4YHDbtWO1K7LIiQ==
+
+"@kiwicom/orbit-components@~0.61.0":
+  version "0.61.0"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-components/-/orbit-components-0.61.0.tgz#232bbc3e3a01dd5c4ef3892921699aa29e934ff4"
+  integrity sha512-sZL5F/I1Im4C9O//RvhclTOOGIOAW1iqFAa0JaxHI6U9vNoncwe0+6Tqh5J35IUPp27Q1E6Q4SXmU3BwmZY0tg==
+  dependencies:
+    "@kiwicom/js" "^0.9.0"
+    "@kiwicom/orbit-design-tokens" "~0.6.6"
+
+"@kiwicom/orbit-design-tokens@~0.6.6":
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/@kiwicom/orbit-design-tokens/-/orbit-design-tokens-0.6.6.tgz#3864be300088898e70d66ee85a9e02f3a37c41d6"
+  integrity sha512-7tKnZi3Wn3k50NipO581VuF8wEDDtx589NYxaqLn8UYwYzwVkUR3XSrV54Em/MIU252N3+LNLMmPyj6Ep9fLcg==
+  dependencies:
+    ramda "^0.26.1"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -7803,6 +7823,11 @@ ramda@^0.21.0:
   version "0.21.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.21.0.tgz#a001abedb3ff61077d4ff1d577d44de77e8d0a35"
   integrity sha1-oAGr7bP/YQd9T/HVd9RN536NCjU=
+
+ramda@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
