@@ -39,6 +39,7 @@ const handleBtnType = (modifier, theme) => {
 			return {
 				color: theme.palette.brandWhite,
 				background: theme.palette.brandRed,
+				borderColor: theme.palette.brandRed,
 				'&:hover': {
 					background: theme.palette.brandRedDark
 				}

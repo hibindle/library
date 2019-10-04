@@ -13,7 +13,6 @@ function loadStories() {
 
 addDecorator(story => (
 	<ThemeProvider theme={Theme}>
-		{console.warn(Theme, 'Isaac')}
 		<GlobalStyle />
 		{story()}
 	</ThemeProvider>
