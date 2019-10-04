@@ -88,6 +88,7 @@
 		"@kiwicom/orbit-components": "~0.61.0",
 		"@svgr/cli": "^4.3.2",
 		"formik": "^1.5.8",
+		"js-yaml": "~3.13.1",
 		"lodash": "^4.17.15",
 		"styled-normalize": "~8.0.6"
 	}
