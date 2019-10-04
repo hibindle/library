@@ -13,9 +13,24 @@ const styles = {
 storiesOf('TextGroup', module).add('Default', () => (
 	<div className="BNDSB-page-wrapper">
 		<div style={styles}>
-			<TextGroup title={'Isaac Martin'} content={'Isaac Martin'} />
-			<TextGroup title={'Isaac Martin'} content={'Isaac Martin'} />
-			<TextGroup title={'Isaac Martin'} content={'Isaac Martin'} />
+			<TextGroup
+				title={'Isaac Martin'}
+				content={
+					'We can deliver to anywhere in NYC—including your apartment, office, or anywhere else someone can sign for your delivery. Never wait in line at a pharmacy again.'
+				}
+			/>
+			<TextGroup
+				title={'Isaac Martin'}
+				content={
+					'We can deliver to anywhere in NYC—including your apartment, office, or anywhere else someone can sign for your delivery. Never wait in line at a pharmacy again.'
+				}
+			/>
+			<TextGroup
+				title={'Isaac Martin'}
+				content={
+					'We can deliver to anywhere in NYC—including your apartment, office, or anywhere else someone can sign for your delivery. Never wait in line at a pharmacy again.'
+				}
+			/>
 		</div>
 	</div>
 ))

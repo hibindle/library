@@ -1,26 +1,26 @@
 import styled from 'styled-components'
-import { palette } from 'variables'
 import { H4, P } from 'Typography'
 
-const SCFAQWrapper = styled('div')`
-	display: flex;
-	flex-direction: column;
-	border-top: 1px solid ${palette.brandBlackLight};
-`
+const SCFAQWrapper = styled('div')(({ theme }) => ({
+	display: `flex`,
+	flexDirection: `column`,
+	borderTop: `1px solid ${theme.palette.brandBlackLight}`
+}))
 
-const SCFAQ = styled('button')`
-	-webkit-appearance: none;
-	background: none;
-	border: none;
-	border-bottom: 1px solid ${palette.brandBlackLight};
-`
+const SCFAQ = styled('button')(({ theme }) => ({
+	appearance: `none`,
+	background: `none`,
+	border: `none`,
+	borderBottom: `1px solid ${theme.palette.brandBlackLight}`
+}))
 
-const FAQTitle = styled(H4)`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-`
+const FAQTitle = styled(H4)(({ theme }) => ({
+	display: `flex`,
+	flexDirection: `row`,
+	justifyContent: `space-between`,
+	color: theme.palette.brandBlackLight
+}))
 
-const FAQContent = styled(P)``
+const FAQContent = styled(P)(() => ({}))
 
 export { SCFAQWrapper, SCFAQ, FAQContent, FAQTitle }

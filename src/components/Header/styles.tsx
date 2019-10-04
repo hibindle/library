@@ -1,18 +1,17 @@
 import styled from 'styled-components'
 import { padding } from 'polished'
-import { variables } from 'variables'
 
-const SCHeader = styled('header')`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: ${padding(variables.whitespaceSmallBase)};
-`
+const SCHeader = styled('header')(({ theme }) => ({
+	display: `flex`,
+	alignItems: `center`,
+	justifyContent: `spaceBetween`,
+	...padding(theme.variables.whitespaceSmallBase)
+}))
 
-const SCHeaderContent = styled('div')`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`
+const SCHeaderContent = styled('div')(() => ({
+	display: `flex`,
+	alignItems: `center`,
+	justifyContent: `center`
+}))
 
 export { SCHeader, SCHeaderContent }

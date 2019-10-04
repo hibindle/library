@@ -1,66 +1,71 @@
 import styled from 'styled-components'
 import { padding } from 'polished'
 import { SCProps } from '.'
-import { variables, palette } from 'variables'
 
 const handleImgDir = modifier => {
 	switch (modifier) {
 		case 'left':
-			return `
-			margin-left: auto; 
-			`
+			return {
+				marginLeft: `auto`
+			}
+
 		case 'bottom':
-			return `
-			margin-right: auto; 
-			margin-left: auto; 
-			`
+			return {
+				marginRight: `auto`,
+				marginLeft: `auto`
+			}
 
 		default:
-			return `
-			margin-right: auto; 
-			`
+			return {
+				marginRight: `auto`
+			}
 	}
 }
 
 const handleContentDir = modifier => {
 	switch (modifier) {
 		case 'left':
-			return `
-			left: 0; 
-			`
+			return {
+				left: 0
+			}
+
 		case 'bottom':
-			return `
-			bottom: 0; 
-			top: auto;
-			transform: translateY(50%);
-			`
+			return {
+				bottom: 0,
+				top: `auto`,
+				transform: `translateY(50%)`
+			}
 		default:
-			return `
-			right: 0; 
-			`
+			return {
+				right: 0
+			}
 	}
 }
 
-export const SCHeroWithContent = styled('section')<SCProps>`
-	display: flex;
-	position: relative;
-	alignitems: center;
-	justify-content: center;
-	width: 100%;
-`
+export const SCHeroWithContent = styled('header')<SCProps>(() => ({
+	display: `flex`,
+	position: `relative`,
+	alignitems: `center`,
+	justifyContent: `center`,
+	width: `100%`
+}))
 
-export const SCImageWrap = styled('img')<SCProps>`
-	width: ${variables.grid10col};
-	${({ contentPosition }) => handleImgDir(contentPosition)};
-`
+export const SCImageWrap = styled('img')<SCProps>(
+	({ theme, contentPosition }) => ({
+		width: theme.variables.grid10col,
+		...handleImgDir(contentPosition)
+	})
+)
 
-export const SCContentWrap = styled('div')<SCProps>`
-	position: absolute;
-	width: ${variables.grid4col};
-	background: ${palette.brandWhite};
-	${padding(variables.whitespaceSmallBase)};
-	border-radius: ${variables.borderRadiusLarge};
-	top: 50%;
-	transform: translateY(-50%);
-	${({ contentPosition }) => handleContentDir(contentPosition)};
-`
+export const SCContentWrap = styled('div')<SCProps>(
+	({ theme, contentPosition }) => ({
+		position: `absolute`,
+		width: `theme.variables.grid4col`,
+		background: `theme.palette.brandWhite`,
+		...padding(theme.variables.whitespaceSmallBase),
+		borderRadius: theme.variables.borderRadiusLarge,
+		top: `50%`,
+		transform: `translateY(-50%)`,
+		...handleContentDir(contentPosition)
+	})
+)

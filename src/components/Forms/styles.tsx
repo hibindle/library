@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 import { padding } from 'polished'
-import { variables, palette, typography } from 'variables'
 
-const FieldWrap = styled('div')`
-	display: flex;
-	position: relative;
-`
-const SCLabel = styled('label')`
-	border: 1px;
-	position: absolute;
-	background: ${palette.brandWhite};
-	left: 10px;
-	top: -9px;
-	font-size: ${typography.iota} ${padding(0, variables.whitespaceSmall)};
-`
+const SCLabel = styled.label(({ theme }) => ({
+	border: `1px`,
+	position: `absolute`,
+	background: theme.palette.brandWhite,
+	left: `10px`,
+	top: `-9px`,
+	fontSize: theme.typography.iota,
+	...padding(0, theme.variables.whitespaceSmall)
+}))
+
+const FieldWrap = styled('div')(({}) => ({
+	display: `flex`,
+	position: `relative`
+}))
 
 export { FieldWrap, SCLabel }
