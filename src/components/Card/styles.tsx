@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 import { Props } from './index'
-import { palette, variables } from 'variables'
 import { padding } from 'polished'
 
-const SCCardBase = styled('article')<Props>`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border: 1px solid ${palette.brandBlackLight};
-	border-radius: ${variables.borderRadiusBase};
-	box-shadow: ${variables.cardShadow};
-	${padding(variables.whitespaceSmallLess, variables.whitespaceLargeBase)};
-	background-color: ${palette.brandWhite};
-	max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : 'none')};
-`
+const SCCardBase = styled.article<Props>(({ theme, maxWidth }) => ({
+	display: `flex`,
+	flexDirection: `column`,
+	alignItems: `center`,
+	border: `1px solid ${theme.palette.brandBlackLight}`,
+	borderRadius: theme.variables.borderRadiusBase,
+	boxShadow: theme.variables.cardShadow,
+	...padding(
+		theme.variables.whitespaceSmallLess,
+		theme.variables.whitespaceLargeBase
+	),
+	backgroundColor: theme.palette.brandWhite,
+	maxWidth: maxWidth ? `${maxWidth}px` : 'none'
+}))
 
 export default SCCardBase

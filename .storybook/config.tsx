@@ -2,19 +2,20 @@ import * as React from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import GlobalStyle from '../src/GlobalStyle'
 import './storybook.css'
+import Theme from '../src/theme'
+import { ThemeProvider } from 'styled-components'
 
 const req = require.context('../src', true, /.stories.tsx$/)
-
-const withGlobals = story => (
-	<>
-		<GlobalStyle />
-		{story()}
-	</>
-)
 
 function loadStories() {
 	req.keys().forEach(req)
 }
 
-addDecorator(withGlobals)
+addDecorator(story => (
+	<ThemeProvider theme={Theme}>
+		<GlobalStyle />
+		{story()}
+	</ThemeProvider>
+))
+
 configure(loadStories, module)

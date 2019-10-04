@@ -2,67 +2,71 @@ import styled from 'styled-components'
 import { LinkProps } from './LinkAsButton'
 import { BtnProps } from './index'
 import { padding, margin } from 'polished'
-import { variables, typography, palette } from 'variables'
 
 type Props = LinkProps & BtnProps
 
-const handleBtnType = modifier => {
+const handleBtnType = (modifier, theme) => {
 	switch (modifier) {
 		case 'outline':
-			return `
-			color: ${palette.brandRed}; 
-			background: transparent;
-			&:hover {
-				background: ${palette.brandRedLight};
-				color: ${palette.brandWhite};
+			return {
+				color: theme.palette.brandRed,
+				background: `transparent`,
+				'&:hover': {
+					background: theme.palette.brandRedLight,
+					color: theme.palette.brandWhite
+				}
 			}
-			`
+
 		case 'outlineBlack':
-			return `
-			color: ${palette.brandBlack}; 
-			border-color: ${palette.brandBlack}
-			background: transparent;
-			&:hover {
-				background: ${palette.brandBlack};
-				color: ${palette.brandWhite};
+			return {
+				color: theme.palette.brandBlack,
+				borderColor: theme.palette.brandBlack,
+				background: `transparent`,
+				'&:hover': {
+					background: theme.palette.brandBlack,
+					color: theme.palette.brandWhite
+				}
 			}
-			`
 		case 'black':
-			return `
-			color: ${palette.brandWhite}; 
-			background: ${palette.brandBlack};
-			&:hover {
-				background: ${palette.brandBlackLight};
+			return {
+				color: theme.palette.brandWhite,
+				background: theme.palette.brandBlack,
+				'&:hover': {
+					background: theme.palette.brandBlackLight
+				}
 			}
-			`
 		default:
-			return `
-			color: ${palette.brandWhite}; 
-			background: ${palette.brandRed};
-			&:hover {
-    		background: ${palette.brandRedDark};
-  		}
-			`
+			return {
+				color: theme.palette.brandWhite,
+				background: theme.palette.brandRed,
+				borderColor: theme.palette.brandRed,
+				'&:hover': {
+					background: theme.palette.brandRedDark
+				}
+			}
 	}
 }
 
-const SCButton = styled('button')<Props>`
-	display: initial;
-	white-space: nowrap;
-	text-align: center;
-	vertical-align: bottom;
-	color: ${palette.brandWhite};
-	${padding(variables.whitespaceSmallLess, variables.whitespaceLargeBase)};
-	${margin(variables.whitespaceSmallLess, null, null)};
-	border: 1px solid;
-	outline: none;
-	border-radius: ${variables.borderRadiusXLarge};
-	font-family: 'IBM Plex Mono';
-	font-size: ${typography.eta};
-	cursor: pointer;
-	transition: background-color 0.2s ease;
-	${({ modifier }) => handleBtnType(modifier)};
-	text-decoration: none;
-`
+const SCButton = styled.button<Props>(({ theme, modifier }) => ({
+	display: `initial`,
+	whiteSpace: `nowrap`,
+	textAlign: `center`,
+	verticalAlign: `bottom`,
+	color: theme.palette.brandWhite,
+	...padding(
+		theme.variables.whitespaceSmallLess,
+		theme.variables.whitespaceLargeBase
+	),
+	...margin(theme.variables.whitespaceSmallLess, null, null),
+	border: `1px solid`,
+	outline: `none`,
+	borderRadius: theme.variables.borderRadiusXLarge,
+	fontFamily: 'IBM Plex Mono',
+	fontSize: theme.typography.eta,
+	cursor: 'pointer',
+	transition: 'backgroundColor 0.2s ease',
+	...handleBtnType(modifier, theme),
+	textDecoration: 'none'
+}))
 
 export { SCButton }
