@@ -1,4 +1,5 @@
 import React from 'react'
+import useCopy from '../../../copy2context/useCopy'
 import { SCButton } from './styles'
 
 export interface BtnProps {
@@ -11,9 +12,12 @@ const Button: React.FunctionComponent<BtnProps> = ({
 	onClick,
 	modifier
 }) => {
+	const { getCopy } = useCopy('about')
 	return (
 		<SCButton modifier={modifier} onClick={onClick}>
-			{children}
+			{getCopy('graph')}
+
+			{/* {children} */}
 		</SCButton>
 	)
 }

@@ -18,7 +18,13 @@ try {
 			const newObject = { [prefix]: yamlData }
 			output = { ...output, ...newObject }
 		})
-		fs.writeFileSync(`src/copy.json`, JSON.stringify(output, null, 4))
+		const exportedObject = `export default ${JSON.stringify(
+			output,
+			null,
+			4
+		)}`
+
+		fs.writeFileSync(`src/copy.js`, exportedObject)
 	})
 } catch (e) {
 	console.log(e)
