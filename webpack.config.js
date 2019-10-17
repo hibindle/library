@@ -68,7 +68,8 @@ module.exports = (env, argv) => {
 	if (argv.mode === 'development') {
 		config.plugins = [
 			new CopyWebpackPlugin([
-				{ from: 'dist', to: '../../frontend/_shared' }
+				{ from: 'dist', to: '../../frontend/_shared' },
+				{ from: 'src', to: '../../frontend/_shared' }
 			])
 		]
 	}
