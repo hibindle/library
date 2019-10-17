@@ -1,6 +1,6 @@
 {
 	"name": "@bindle/library",
-	"version": "1.0.10",
+	"version": "1.0.13",
 	"private": false,
 	"description": "Shared Components and Functions for bindle",
 	"homepage": "https://github.com/isaac-martin/bindle-library#readme",
@@ -88,6 +88,7 @@
 		"@kiwicom/orbit-components": "~0.61.0",
 		"@svgr/cli": "^4.3.2",
 		"formik": "^1.5.8",
+		"js-yaml": "~3.13.1",
 		"lodash": "^4.17.15",
 		"styled-normalize": "~8.0.6"
 	}

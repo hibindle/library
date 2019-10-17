@@ -1,10 +1,9 @@
-import * as React from 'react'
+import React, { useContext } from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import GlobalStyle from '../src/GlobalStyle'
 import './storybook.css'
 import Theme from '../src/theme'
 import { ThemeProvider } from 'styled-components'
-
 const req = require.context('../src', true, /.stories.tsx$/)
 
 function loadStories() {
@@ -13,8 +12,10 @@ function loadStories() {
 
 addDecorator(story => (
 	<ThemeProvider theme={Theme}>
-		<GlobalStyle />
-		{story()}
+		<>
+			<GlobalStyle />
+			{story()}
+		</>
 	</ThemeProvider>
 ))
 
