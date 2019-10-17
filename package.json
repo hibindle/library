@@ -26,7 +26,8 @@
 		"watch": "webpack --watch --progress --mode=development",
 		"illustrations": "node_modules/.bin/svgr -d src/illustrations src/illustrations  --ext=tsx",
 		"icons": "node_modules/.bin/svgr -d src/icons src/icons --icon --ext=tsx --replace-attr-values=#000=currentColor",
-		"svgs": "yarn icons && yarn illustrations"
+		"svgs": "yarn icons && yarn illustrations",
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"lint-staged": {
 		"*.{js,css,json,md}": [
