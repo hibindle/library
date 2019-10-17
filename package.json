@@ -13,7 +13,7 @@
 	},
 	"license": "MIT",
 	"author": "",
-	"main": "dist/bindle.js",
+	"main": "dist/index.js",
 	"scripts": {
 		"start": "yarn storybook",
 		"build-storybook": "build-storybook",
