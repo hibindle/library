@@ -1,7 +1,7 @@
 export default {
     "about": {
         "graph": {
-            "name": "Account",
+            "name": "Account {name}",
             "description": "Email notifications"
         }
     },

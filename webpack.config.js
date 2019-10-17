@@ -59,7 +59,7 @@ const config = {
 		globalObject: `(typeof self !== 'undefined' ? self : this)`,
 		path: path.resolve(__dirname, 'dist/'),
 		publicPath: '',
-		filename: 'bindle.js',
+		filename: 'index.js',
 		libraryTarget: 'umd'
 	}
 }
@@ -68,7 +68,7 @@ module.exports = (env, argv) => {
 	if (argv.mode === 'development') {
 		config.plugins = [
 			new CopyWebpackPlugin([
-				{ from: 'src', to: '../../bindle-main/_shared' }
+				{ from: 'dist', to: '../../frontend/_shared' }
 			])
 		]
 	}
